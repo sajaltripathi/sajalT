@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Document body with a folded top-right corner, kept within the 66dp adaptive-icon safe zone -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,20 L58,20 L72,34 L72,92 L28,92 Z" />
+    <!-- Folded corner accent -->
+    <path
+        android:fillColor="#0A4C44"
+        android:pathData="M58,20 L72,34 L58,34 Z" />
+    <!-- Three text lines -->
+    <path
+        android:fillColor="#0A4C44"
+        android:pathData="M36,44 L64,44 L64,48 L36,48 Z" />
+    <path
+        android:fillColor="#0A4C44"
+        android:pathData="M36,54 L64,54 L64,58 L36,58 Z" />
+    <path
+        android:fillColor="#0A4C44"
+        android:pathData="M36,64 L52,64 L52,68 L36,68 Z" />
+</vector>

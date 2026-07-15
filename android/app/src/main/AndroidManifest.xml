@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      PRIVACY NOTICE — READ BEFORE ADDING ANY <uses-permission> HERE.
+
+      This manifest intentionally declares ZERO <uses-permission> entries. sajalT does not
+      request INTERNET, ACCESS_NETWORK_STATE, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE,
+      MANAGE_EXTERNAL_STORAGE, READ_MEDIA_IMAGES, or any other runtime/install-time permission.
+
+      All file access is via the Storage Access Framework system pickers
+      (ACTION_OPEN_DOCUMENT / ACTION_OPEN_DOCUMENT_TREE / ACTION_CREATE_DOCUMENT through
+      ActivityResultContracts.OpenDocument / OpenMultipleDocuments / CreateDocument), which on
+      API 26+ requires no manifest permission at all — the system itself brokers a one-time
+      per-file grant when the user picks a file.
+
+      If you are extending this app and feel tempted to add INTERNET or a storage permission,
+      stop and re-read the project's privacy requirements first (README.md "Privacy policy").
+    -->
+
+    <application
+        android:name=".SajalTApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="false"
+        android:theme="@style/Theme.SajalT"
+        android:hardwareAccelerated="true"
+        tools:targetApi="34">
+
+        <!--
+          android:usesCleartextTraffic="false" and a network_security_config that permits no
+          cleartext or CA-trusted connections at all are defense-in-depth only: with no
+          INTERNET permission granted, the OS blocks all sockets regardless of this config.
+          Both are kept so the "no networking, verified two ways" claim in the README is
+          literally true, not just implied by omission.
+        -->
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SajalT">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.ImageToPdfActivity"
+            android:exported="false"
+            android:label="@string/feature_image_to_pdf_title"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.DocxToPdfActivity"
+            android:exported="false"
+            android:label="@string/feature_docx_to_pdf_title" />
+
+        <activity
+            android:name=".ui.PdfToDocxActivity"
+            android:exported="false"
+            android:label="@string/feature_pdf_to_docx_title" />
+
+        <activity
+            android:name=".ui.PdfCompressActivity"
+            android:exported="false"
+            android:label="@string/feature_pdf_compress_title" />
+
+        <activity
+            android:name=".ui.ImageCompressActivity"
+            android:exported="false"
+            android:label="@string/feature_image_compress_title" />
+
+        <activity
+            android:name=".ui.OcrActivity"
+            android:exported="false"
+            android:label="@string/feature_ocr_title" />
+
+    </application>
+
+</manifest>

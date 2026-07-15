@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_variant"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_md">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="@color/on_surface"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/home_subtitle"
+            android:textAppearance="@style/TextAppearance.SajalT.Body" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            app:cardBackgroundColor="@color/success_bg"
+            app:strokeWidth="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_md"
+                android:text="@string/home_privacy_banner"
+                android:textColor="@color/success"
+                android:textStyle="bold"
+                android:textSize="13sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Image to PDF -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImageToPdf"
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_md"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md">
+                <ImageView
+                    android:layout_width="@dimen/feature_icon_size"
+                    android:layout_height="@dimen/feature_icon_size"
+                    android:src="@drawable/ic_feature_image_to_pdf"
+                    android:contentDescription="@string/cd_icon_image_to_pdf" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_image_to_pdf_title"
+                        android:textAppearance="@style/TextAppearance.SajalT.Title"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_image_to_pdf_desc"
+                        android:textAppearance="@style/TextAppearance.SajalT.Body"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- DOCX to PDF -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardDocxToPdf"
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md">
+                <ImageView
+                    android:layout_width="@dimen/feature_icon_size"
+                    android:layout_height="@dimen/feature_icon_size"
+                    android:src="@drawable/ic_feature_docx_to_pdf"
+                    android:contentDescription="@string/cd_icon_docx_to_pdf" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_docx_to_pdf_title"
+                        android:textAppearance="@style/TextAppearance.SajalT.Title"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_docx_to_pdf_desc"
+                        android:textAppearance="@style/TextAppearance.SajalT.Body"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- PDF to DOCX -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPdfToDocx"
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md">
+                <ImageView
+                    android:layout_width="@dimen/feature_icon_size"
+                    android:layout_height="@dimen/feature_icon_size"
+                    android:src="@drawable/ic_feature_pdf_to_docx"
+                    android:contentDescription="@string/cd_icon_pdf_to_docx" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_pdf_to_docx_title"
+                        android:textAppearance="@style/TextAppearance.SajalT.Title"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_pdf_to_docx_desc"
+                        android:textAppearance="@style/TextAppearance.SajalT.Body"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Compress PDF -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPdfCompress"
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md">
+                <ImageView
+                    android:layout_width="@dimen/feature_icon_size"
+                    android:layout_height="@dimen/feature_icon_size"
+                    android:src="@drawable/ic_feature_pdf_compress"
+                    android:contentDescription="@string/cd_icon_pdf_compress" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_pdf_compress_title"
+                        android:textAppearance="@style/TextAppearance.SajalT.Title"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_pdf_compress_desc"
+                        android:textAppearance="@style/TextAppearance.SajalT.Body"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Compress Image -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardImageCompress"
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md">
+                <ImageView
+                    android:layout_width="@dimen/feature_icon_size"
+                    android:layout_height="@dimen/feature_icon_size"
+                    android:src="@drawable/ic_feature_image_compress"
+                    android:contentDescription="@string/cd_icon_image_compress" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_image_compress_title"
+                        android:textAppearance="@style/TextAppearance.SajalT.Title"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_image_compress_desc"
+                        android:textAppearance="@style/TextAppearance.SajalT.Body"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- OCR -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardOcr"
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:layout_marginBottom="@dimen/space_lg"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md">
+                <ImageView
+                    android:layout_width="@dimen/feature_icon_size"
+                    android:layout_height="@dimen/feature_icon_size"
+                    android:src="@drawable/ic_feature_ocr"
+                    android:contentDescription="@string/cd_icon_ocr" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_ocr_title"
+                        android:textAppearance="@style/TextAppearance.SajalT.Title"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/feature_ocr_desc"
+                        android:textAppearance="@style/TextAppearance.SajalT.Body"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

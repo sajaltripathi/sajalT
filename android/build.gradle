@@ -1,0 +1,17 @@
+// Top-level build file: declares plugin versions once, applied per-module with "apply false"
+// here and actually applied in app/build.gradle.
+//
+// Toolchain pinned deliberately (see README.md "Toolchain choices" section):
+//   Android Gradle Plugin 8.7.3 / Kotlin 2.0.21 / Gradle 8.9
+// AGP 9.x exists as of mid-2026 with a new "built-in Kotlin" DSL model; this project stays on
+// the well-established 8.x line for build reliability. Upgrading later is a normal, isolated
+// Gradle-file change and does not touch any of the app's Kotlin source.
+
+plugins {
+    id 'com.android.application' version '8.7.3' apply false
+    id 'org.jetbrains.kotlin.android' version '2.0.21' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,36 @@
+// settings.gradle
+//
+// Repository notes (read this before asking "why does a privacy app talk to the internet?"):
+// The blocks below (pluginManagement / dependencyResolutionManagement) configure where GRADLE
+// fetches build tooling and library .aar/.jar files from WHEN YOU COMPILE THE APP on your own
+// machine or in CI. This happens on the developer's/CI's computer, at build time, over the
+// build machine's network connection.
+//
+// It has NOTHING to do with what the compiled sajalT APK does on a user's phone. The compiled
+// app contains no networking code and requests no INTERNET permission (see app/build.gradle
+// and AndroidManifest.xml) so it cannot make network calls at runtime, regardless of where its
+// dependencies were downloaded from during the build.
+//
+// jitpack.io is used solely to fetch a precompiled build of the offline Tesseract4Android OCR
+// engine, because that project publishes there instead of Maven Central. It is a build-time
+// artifact host, same role as Google's or Maven Central's servers.
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // required only for Tesseract4Android (OCR)
+    }
+}
+
+rootProject.name = "sajalT"
+include ':app'

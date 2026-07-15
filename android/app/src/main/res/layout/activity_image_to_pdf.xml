@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface_variant">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_md"
+        android:text="@string/feature_image_to_pdf_title"
+        android:textAppearance="@style/TextAppearance.SajalT.Title"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_md"
+        android:paddingEnd="@dimen/space_md">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectImages"
+            style="@style/Widget.SajalT.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_select_images" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClearSelection"
+            style="@style/Widget.SajalT.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_sm"
+            android:text="@string/btn_clear_selection" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPageCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_md"
+        android:layout_marginTop="@dimen/space_sm"
+        android:textAppearance="@style/TextAppearance.SajalT.Body"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_lg"
+        android:gravity="center"
+        android:text="@string/imgtopdf_empty_state"
+        android:textAppearance="@style/TextAppearance.SajalT.Body" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="@dimen/space_md" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_md"
+        android:visibility="gone"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_md"
+        android:paddingEnd="@dimen/space_md"
+        android:paddingBottom="@dimen/space_sm"
+        android:text="@string/imgtopdf_quality_note"
+        android:textAppearance="@style/TextAppearance.SajalT.Body"
+        android:textSize="12sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConvert"
+        style="@style/Widget.SajalT.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_md"
+        android:enabled="false"
+        android:text="@string/btn_convert_to_pdf" />
+
+</LinearLayout>

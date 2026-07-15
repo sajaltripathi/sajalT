@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">1dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+
+    <dimen name="feature_icon_size">40dp</dimen>
+    <dimen name="thumbnail_size">64dp</dimen>
+    <dimen name="control_touch_target">48dp</dimen>
+</resources>

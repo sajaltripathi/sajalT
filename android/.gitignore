@@ -1,0 +1,25 @@
+# Build output
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuildPolicy
+.cxx/
+local.properties
+
+# Per-module build output
+*/build/
+
+# Gradle wrapper jar is intentionally NOT committed (see README "Why no gradlew binary").
+# If you generate one locally with `gradle wrapper`, keep it out of git by leaving this line:
+gradle/wrapper/gradle-wrapper.jar
+
+# Keystores must never be committed
+*.jks
+*.keystore
+
+# Never commit real OCR language data here by accident (large binaries; see README OCR section)
+app/src/main/assets/tessdata/*.traineddata

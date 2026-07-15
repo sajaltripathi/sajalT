@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_variant"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_md"
+            android:text="@string/feature_pdf_compress_title"
+            android:textAppearance="@style/TextAppearance.SajalT.Title"
+            android:textSize="20sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_md">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_lg"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvSelectedFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/status_idle"
+                    android:textAppearance="@style/TextAppearance.SajalT.Body"
+                    android:layout_marginBottom="@dimen/space_sm" />
+
+                <TextView
+                    android:id="@+id/tvOriginalSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance.SajalT.Body"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="@dimen/space_md" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSelectPdf"
+                    style="@style/Widget.SajalT.Button.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_select_pdf" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <RadioGroup
+            android:id="@+id/radioGroupTarget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_md">
+
+            <RadioButton
+                android:id="@+id/radioPreset100kb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/compress_preset_100kb" />
+
+            <RadioButton
+                android:id="@+id/radioCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/compress_custom_target" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customTargetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
+                android:hint="@string/compress_target_hint"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCustomTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/space_md"
+            android:paddingEnd="@dimen/space_md"
+            android:paddingBottom="@dimen/space_sm"
+            android:visibility="gone"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCompress"
+            style="@style/Widget.SajalT.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_md"
+            android:enabled="false"
+            android:text="@string/btn_compress_pdf" />
+
+    </LinearLayout>
+</ScrollView>

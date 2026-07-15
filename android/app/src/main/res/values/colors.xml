@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary: deep teal — chosen for a calm, trustworthy, "privacy tool" feel rather than a
+         generic Android blue. Used sparingly per feature card for visual distinction. -->
+    <color name="brand_primary">#0F6E63</color>
+    <color name="brand_primary_dark">#0A4C44</color>
+    <color name="brand_on_primary">#FFFFFF</color>
+
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F2F5F4</color>
+    <color name="on_surface">#1B1F1E</color>
+    <color name="on_surface_muted">#5B6461</color>
+    <color name="outline">#D6DEDC</color>
+
+    <color name="success">#1E7D45</color>
+    <color name="success_bg">#E4F5EA</color>
+    <color name="error">#B3261E</color>
+    <color name="error_bg">#FCE8E6</color>
+    <color name="warning">#8A5A00</color>
+    <color name="warning_bg">#FFF2DB</color>
+
+    <!-- Per-feature accent colors, used only as small icon tints on the home cards so the six
+         feature cards are easy to tell apart at a glance. -->
+    <color name="accent_image_to_pdf">#2E7D6B</color>
+    <color name="accent_docx_to_pdf">#2C5F9E</color>
+    <color name="accent_pdf_to_docx">#6A4C93</color>
+    <color name="accent_pdf_compress">#B15A1D</color>
+    <color name="accent_image_compress">#B15A7A</color>
+    <color name="accent_ocr">#4B7F1E</color>
+
+    <color name="scrim">#33000000</color>
+</resources>

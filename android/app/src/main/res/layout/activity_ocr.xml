@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/surface_variant">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_md"
+        android:text="@string/feature_ocr_title"
+        android:textAppearance="@style/TextAppearance.SajalT.Title"
+        android:textSize="20sp" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.SajalT.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_md"
+        app:cardBackgroundColor="@color/success_bg"
+        app:strokeWidth="0dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_md"
+            android:text="@string/ocr_privacy_note"
+            android:textColor="@color/success"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/space_md">
+
+        <TextView
+            android:id="@+id/tvLanguageDataStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.SajalT.Body"
+            android:textSize="12sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLanguageData"
+            style="@style/Widget.SajalT.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_select_language_data" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/space_md"
+        android:paddingEnd="@dimen/space_md"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectSource"
+            style="@style/Widget.SajalT.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_select_image_or_pdf" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pageNumberLayout"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_sm"
+            android:visibility="gone"
+            android:hint="Page">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPageNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSelectedFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_md"
+        android:paddingEnd="@dimen/space_md"
+        android:paddingTop="@dimen/space_sm"
+        android:text="@string/status_idle"
+        android:textAppearance="@style/TextAppearance.SajalT.Body"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_md"
+        android:visibility="gone"
+        android:textSize="13sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRunOcr"
+        style="@style/Widget.SajalT.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/space_md"
+        android:enabled="false"
+        android:text="@string/btn_run_ocr" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/space_md">
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.SajalT.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etRecognizedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="160dp"
+                android:padding="@dimen/space_md"
+                android:background="@android:color/transparent"
+                android:gravity="top|start"
+                android:hint="@string/ocr_recognized_text_hint"
+                android:inputType="textMultiLine"
+                android:textSize="13sp" />
+        </com.google.android.material.card.MaterialCardView>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_md">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopyText"
+            style="@style/Widget.SajalT.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/btn_copy_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveText"
+            style="@style/Widget.SajalT.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/space_sm"
+            android:enabled="false"
+            android:text="@string/btn_save_text" />
+    </LinearLayout>
+
+</LinearLayout>

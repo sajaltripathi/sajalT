@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">sajalT</string>
+    <string name="home_subtitle">Offline document &amp; image converter</string>
+    <string name="home_privacy_banner">100% offline. No internet permission. Your files never leave this device.</string>
+
+    <!-- Feature cards -->
+    <string name="feature_image_to_pdf_title">Image to PDF</string>
+    <string name="feature_image_to_pdf_desc">Combine one or more photos into a single PDF, in the order you choose</string>
+    <string name="feature_docx_to_pdf_title">DOCX to PDF</string>
+    <string name="feature_docx_to_pdf_desc">Convert a Word document to PDF, entirely on-device</string>
+    <string name="feature_pdf_to_docx_title">PDF to DOCX</string>
+    <string name="feature_pdf_to_docx_desc">Convert a PDF into an editable Word document</string>
+    <string name="feature_pdf_compress_title">Compress PDF</string>
+    <string name="feature_pdf_compress_desc">Shrink a PDF to roughly the size you need</string>
+    <string name="feature_image_compress_title">Compress Image</string>
+    <string name="feature_image_compress_desc">Shrink a photo to roughly the size you need</string>
+    <string name="feature_ocr_title">Offline Text Recognition (OCR)</string>
+    <string name="feature_ocr_desc">Extract text from an image or scanned PDF page, fully on-device</string>
+
+    <!-- Common controls -->
+    <string name="btn_select_images">Select Image(s)</string>
+    <string name="btn_select_docx">Select DOCX</string>
+    <string name="btn_select_pdf">Select PDF</string>
+    <string name="btn_convert_to_pdf">Convert to PDF</string>
+    <string name="btn_convert_to_docx">Convert to DOCX</string>
+    <string name="btn_compress_pdf">Compress PDF</string>
+    <string name="btn_compress_image">Compress Image</string>
+    <string name="btn_choose_output_location">Choose Output Location</string>
+    <string name="btn_clear_selection">Clear Selection</string>
+    <string name="btn_add_more">Add More</string>
+    <string name="btn_run_ocr">Recognize Text</string>
+    <string name="btn_copy_text">Copy Text</string>
+    <string name="btn_save_text">Save as .txt</string>
+    <string name="btn_select_language_data">Select Language Data (.traineddata)</string>
+    <string name="btn_remove_language_data">Remove Language Data</string>
+    <string name="btn_select_image_or_pdf">Select Image or PDF Page</string>
+    <string name="btn_choose_pdf_page">Choose Page</string>
+
+    <!-- Status / result messages -->
+    <string name="status_idle">No file selected yet</string>
+    <string name="status_working">Working…</string>
+    <string name="status_success_pdf_saved">PDF saved successfully</string>
+    <string name="status_success_docx_saved">DOCX saved successfully</string>
+    <string name="status_success_image_saved">Image saved successfully</string>
+    <string name="status_success_text_saved">Text file saved successfully</string>
+    <string name="status_copied">Copied to clipboard</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_no_file_selected">Please select a file first</string>
+    <string name="error_out_of_memory">This file is too large to process on this device</string>
+    <string name="error_invalid_target_size">Enter a valid target size, for example 100 KB or 2 MB</string>
+    <string name="error_read_failed">Could not read the selected file</string>
+    <string name="error_write_failed">Could not save the output file</string>
+    <string name="error_unsupported_docx">This file doesn\'t look like a valid .docx (Office Open XML) document</string>
+    <string name="error_unsupported_pdf">This file doesn\'t look like a valid PDF</string>
+    <string name="error_no_language_data">No OCR language data found. Select a .traineddata file first.</string>
+    <string name="error_no_pages">Add at least one page before converting</string>
+
+    <!-- Image to PDF -->
+    <string name="imgtopdf_page_count_format">%1$d page(s) selected</string>
+    <string name="imgtopdf_move_up">Move up</string>
+    <string name="imgtopdf_move_down">Move down</string>
+    <string name="imgtopdf_remove">Remove</string>
+    <string name="imgtopdf_page_number_format">Page %1$d</string>
+    <string name="imgtopdf_empty_state">Selected images will appear here as reorderable pages</string>
+    <string name="imgtopdf_quality_note">Original resolution is preserved — pages are not downscaled or recompressed.</string>
+
+    <!-- Compression -->
+    <string name="compress_preset_100kb">Compress to ~100 KB (recommended)</string>
+    <string name="compress_custom_target">Custom target size</string>
+    <string name="compress_target_hint">e.g. 250 KB, 2 MB, 1 GB</string>
+    <string name="compress_result_format">Result: %1$s (target was %2$s)</string>
+    <string name="compress_could_not_reach_target">Could not reach the target without more quality loss than allowed. Closest achievable size is shown below.</string>
+    <string name="compress_original_size_format">Original size: %1$s</string>
+    <string name="compress_alpha_warning">This image has transparency. Reaching a small target size requires converting to JPEG, which will replace transparent areas with white.</string>
+
+    <!-- OCR -->
+    <string name="ocr_privacy_note">OCR runs 100% on this device. No image, PDF, or extracted text is ever uploaded anywhere.</string>
+    <string name="ocr_recognized_text_hint">Recognized text will appear here</string>
+    <string name="ocr_processing">Recognizing text on-device…</string>
+    <string name="ocr_language_data_status_format">Language data: %1$s</string>
+    <string name="ocr_language_data_none">not set up yet</string>
+    <string name="ocr_language_data_ready">ready (%1$s)</string>
+    <string name="ocr_pick_pdf_page_title">Select a PDF page to recognize</string>
+
+    <!-- Best-effort / limitation notices shown in-app (kept short; full detail lives in README) -->
+    <string name="docxtopdf_limitations_note">Best-effort layout: headings, paragraphs, basic tables and images are preserved. Complex layouts, headers/footers, footnotes and embedded objects may not be. See README for details.</string>
+    <string name="pdftodocx_limitations_note">Best-effort extraction: text, images and simple tables are reconstructed. Complex layouts and scanned pages (kept as images) are approximated. See README for details.</string>
+
+    <!-- Accessibility content descriptions -->
+    <string name="cd_icon_image_to_pdf">Image to PDF</string>
+    <string name="cd_icon_docx_to_pdf">DOCX to PDF</string>
+    <string name="cd_icon_pdf_to_docx">PDF to DOCX</string>
+    <string name="cd_icon_pdf_compress">Compress PDF</string>
+    <string name="cd_icon_image_compress">Compress Image</string>
+    <string name="cd_icon_ocr">Offline OCR</string>
+    <string name="cd_thumbnail">Page thumbnail</string>
+    <string name="cd_back">Back</string>
+
+    <!-- Save-as default filenames -->
+    <string name="default_filename_pdf">converted.pdf</string>
+    <string name="default_filename_docx">converted.docx</string>
+    <string name="default_filename_txt">recognized_text.txt</string>
+    <string name="default_filename_jpg">compressed.jpg</string>
+</resources>

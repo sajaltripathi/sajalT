@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Defense-in-depth only. This app has no INTERNET permission, so the OS already prevents any
+  socket from opening — this file cannot be bypassed to add networking, it only makes an
+  already-impossible thing doubly explicit for anyone auditing the build. base-config with no
+  trust anchors and cleartextTrafficPermitted="false" means: even in a hypothetical future
+  where a permission was accidentally reintroduced, this config alone still blocks plaintext
+  traffic and trusts no certificates.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Intentionally empty: no certificate authorities are trusted by this config. -->
+        </trust-anchors>
+    </base-config>
+</network-security-config>

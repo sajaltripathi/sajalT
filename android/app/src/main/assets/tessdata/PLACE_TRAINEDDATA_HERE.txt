@@ -1,0 +1,6 @@
+Place a Tesseract .traineddata file here (e.g. eng.traineddata) to bundle OCR language data into
+the app at build time. This directory is intentionally empty by default — see the README section
+"OCR: offline details & setup" for where to download one and why none is bundled by default.
+
+Git does not track empty directories; this file exists only to keep this folder present in the
+repository. It is safe to delete once you've added a real .traineddata file here.
