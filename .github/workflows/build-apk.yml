@@ -3,14 +3,9 @@ name: Build Android APK
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'android/**'
-      - '.github/workflows/build-apk.yml'
   pull_request:
     branches: [ main ]
-    paths:
-      - 'android/**'
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 jobs:
   build:
@@ -29,8 +24,6 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      # No gradle-wrapper.jar is committed to this repo (see README "Why no gradlew binary") —
-      # this action provisions the exact Gradle version this project was written against instead.
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v6
         with:
@@ -39,20 +32,8 @@ jobs:
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon --stacktrace
 
-      # Signing is entirely optional — see README "Signing the release build". If
-      # SAJALT_RELEASE_KEYSTORE_BASE64 isn't set as a repo/environment secret, this step is
-      # skipped and the release APK below is built unsigned, which is a normal, expected result.
-      - name: Decode release keystore
-        if: ${{ secrets.SAJALT_RELEASE_KEYSTORE_BASE64 != '' }}
-        run: echo "${{ secrets.SAJALT_RELEASE_KEYSTORE_BASE64 }}" | base64 -d > "${{ github.workspace }}/android/app/release.keystore"
-
       - name: Build release APK
         run: gradle assembleRelease --no-daemon --stacktrace
-        env:
-          SAJALT_RELEASE_STORE_FILE: release.keystore
-          SAJALT_RELEASE_STORE_PASSWORD: ${{ secrets.SAJALT_RELEASE_STORE_PASSWORD }}
-          SAJALT_RELEASE_KEY_ALIAS: ${{ secrets.SAJALT_RELEASE_KEY_ALIAS }}
-          SAJALT_RELEASE_KEY_PASSWORD: ${{ secrets.SAJALT_RELEASE_KEY_PASSWORD }}
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4
