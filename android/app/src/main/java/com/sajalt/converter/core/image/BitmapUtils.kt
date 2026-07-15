@@ -172,12 +172,12 @@ object BitmapUtils {
     }
 
     private fun newRegionDecoder(input: InputStream): BitmapRegionDecoder =
-        if (Build.VERSION.SDK_INT >= 31) {
+        (if (Build.VERSION.SDK_INT >= 31) {
             BitmapRegionDecoder.newInstance(input)
         } else {
             @Suppress("DEPRECATION")
             BitmapRegionDecoder.newInstance(input, false)
-        }
+        }) ?: throw IOException("Unable to create BitmapRegionDecoder: unsupported or corrupt image")
 
     /** At most ~1/4 of the app's per-process heap ceiling for one directly-decoded bitmap. */
     private fun directDecodeLimitBytes(context: Context): Long {
